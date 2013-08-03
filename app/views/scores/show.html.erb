@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @score.title %>
+</p>
+
+<p>
+  <strong>Kana:</strong>
+  <%= @score.kana %>
+</p>
+
+<p>
+  <strong>Composer:</strong>
+  <%= @score.composer %>
+</p>
+
+<p>
+  <strong>Arranger:</strong>
+  <%= @score.arranger %>
+</p>
+
+<p>
+  <strong>Publisher:</strong>
+  <%= @score.publisher %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @score.status %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @score.description %>
+</p>
+
+<%= link_to 'Edit', edit_score_path(@score) %> |
+<%= link_to 'Back', scores_path %>

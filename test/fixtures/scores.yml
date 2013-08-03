@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  kana: MyString
+  composer: MyString
+  arranger: MyString
+  publisher: MyString
+  status: MyString
+  description: MyString
+
+two:
+  title: MyString
+  kana: MyString
+  composer: MyString
+  arranger: MyString
+  publisher: MyString
+  status: MyString
+  description: MyString
