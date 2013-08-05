@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Title</th>
       <th>Kana</th>
       <th>Composer</th>
@@ -19,6 +20,7 @@
   <tbody>
     <% @scores.each do |score| %>
       <tr>
+        <td><%= score.number %></td>
         <td><%= score.title %></td>
         <td><%= score.kana %></td>
         <td><%= score.composer %></td>

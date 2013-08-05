@@ -3,6 +3,7 @@ class CreateScores < ActiveRecord::Migration
     create_table :scores do |t|
       t.string :title
       t.string :kana
+      t.integer :number
       t.string :composer
       t.string :arranger
       t.string :publisher
