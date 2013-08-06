@@ -1,5 +1,6 @@
 Musicscoreviewer::Application.routes.draw do
-  root to: 'auth#index'
+  get "pages/index"
+  root to: 'pages#index'
   resources :scores
 
   # The priority is based upon order of creation: first created -> highest priority.

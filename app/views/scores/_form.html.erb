@@ -1,48 +1,56 @@
-<%= form_for(@score) do |f| %>
-  <% if @score.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@score.errors.count, "error") %> prohibited this score from being saved:</h2>
-
-      <ul>
-      <% @score.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<%= form_for @score, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :title, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :title, :class => 'text_field' %>
     </div>
-  <% end %>
-  <div class="field">
-    <%= f.label :number %><br>
-    <%= f.text_field :number %>
   </div>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="control-group">
+    <%= f.label :kana, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :kana, :class => 'text_field' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :kana %><br>
-    <%= f.text_field :kana %>
+  <div class="control-group">
+    <%= f.label :number, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :number, :class => 'text_field' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :composer %><br>
-    <%= f.text_field :composer %>
+  <div class="control-group">
+    <%= f.label :composer, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :composer, :class => 'text_field' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :arranger %><br>
-    <%= f.text_field :arranger %>
+  <div class="control-group">
+    <%= f.label :arranger, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :arranger, :class => 'text_field' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :publisher %><br>
-    <%= f.text_field :publisher %>
+  <div class="control-group">
+    <%= f.label :publisher, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :publisher, :class => 'text_field' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :status %><br>
-    <%= f.text_field :status %>
+  <div class="control-group">
+    <%= f.label :status, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :status, :class => 'text_field' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+  <div class="control-group">
+    <%= f.label :description, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :description, :class => 'text_field' %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                scores_path, :class => 'btn' %>
   </div>
 <% end %>
