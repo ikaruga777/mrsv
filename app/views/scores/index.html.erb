@@ -30,7 +30,7 @@
         <td><%= score.publisher %></td>
         <td><%= score.status %></td>
         <td><%= score.description %></td>
-        <td><%=l score.created_at %></td>
+        <td><%= score.created_at.strftime("%Y/%m/%d") %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_score_path(score), :class => 'btn btn-mini' %>
