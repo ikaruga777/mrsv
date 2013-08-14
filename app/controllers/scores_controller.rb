@@ -62,8 +62,8 @@ class ScoresController < ApplicationController
   end
 
   def search
-    search_word = URI.decode(params[:q].to_s)
-    @scores = Score.where(kana: search_word)
+    @scores = Score.where("kana LIKE ?", "%#{params[:q]}%")
+    render"index"
   end
 
 
