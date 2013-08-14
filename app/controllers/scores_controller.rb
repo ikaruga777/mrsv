@@ -61,6 +61,12 @@ class ScoresController < ApplicationController
     end
   end
 
+  def search
+    search_word = URI.decode(params[:q].to_s)
+    @scores = Score.where(kana: search_word)
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_score
