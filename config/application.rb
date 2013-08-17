@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
@@ -8,6 +10,19 @@ Bundler.require(:default, Rails.env)
 
 module Musicscoreviewer
   class Application < Rails::Application
+# LESS
+    config.app_generators.stylesheet_engine :less
+    config.less.paths << "#{Rails.root}/lib/less/protractor/stylesheets"
+    config.less.compress = true
+    config.assets.compress = true
+    config.assets.initialize_on_precompile=false # herokuでasset:precomileエラー対策
+
+# Set timezone
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone = :local
+
+# 日本語化
+    config.i18n.default_locale = :ja
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
